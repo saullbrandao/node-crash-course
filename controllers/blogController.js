@@ -30,10 +30,13 @@ const blog_details = (req, res) => {
   const { id } = req.params
   Blog.findById(id)
     .then(result => {
+      if (!result) {
+        throw new Error({ message: 'blog does not exist' })
+      }
       res.render('blogs/details', { blog: result, title: 'Blog Details' })
     })
     .catch(err => {
-      console.log(err)
+      res.status(404).render('404', { title: 'Blog not found' })
     })
 }
 
