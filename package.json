@@ -1,0 +1,14 @@
+{
+  "name": "node-crash-course",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Saull Brandao",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
